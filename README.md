@@ -1,6 +1,8 @@
 # face-recognition
 project for internship application
 
+test files used are also uploaded
+
 Features implemented as of now:
 1. Takes a video as an input (hardcoded the video file) and writes the resulting processed output to an mp4 file
 2. Performs facial recognition through the facial_recognition library's inbuilt models.
