@@ -20,7 +20,7 @@ fps = int(cap.get(cv.CAP_PROP_FPS)) # fps
 
 # create a video_writer
 fourcc = cv.VideoWriter_fourcc(*'mp4v')
-output = cv.VideoWriter('new_video.mp4', fourcc, fps, (width, height)) # creating the videowriter object
+output = cv.VideoWriter('new_video_2.mp4', fourcc, fps, (width, height)) # creating the videowriter object
 
 reference_face_encodings = None # initially empty but used later to iterate for test cases
 
@@ -48,23 +48,8 @@ while cap.isOpened():
         #cv.imshow('video', frame)
         print("ts is written to the file")
         output.write(frame)
-
-    # second test case
-    elif len(face_locations) == 2: # mirror case, but im hardcoding the value. ideally, this should be "i"
-        if reference_face_encodings is None and face_encodings:
-            reference_face_encodings = [face_encodings[0]] # ideally, this would iterate over all the face_encodings to match faces
-        match_results = [
-                        face_recognition.compare_faces(reference_face_encodings, encoding)[0] 
-                        for encoding in face_encodings[1:] # for future modifications
-                        ] # checks the second element becasue the first element is always going to be true
-        #cv.imshow('video', frame)
-        if match_results and all(match_results):
-            print('Unique person multiple images (mirror)')
-            output.write(frame)
-        else:
-            print('not matching so not written')
-
-    # third case
+        
+    # second case
     else:
         print(f"skipping frame with {len(face_locations)} faces")
 
