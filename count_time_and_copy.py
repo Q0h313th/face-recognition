@@ -19,7 +19,7 @@ def safe_copy(src, dst_dir):
 
 
 if len(sys.argv) != 2:
-    print("Usage: python3 get_video_length <video_path>")
+    print("Usage: python count_time.py <video_path>")
     sys.exit(1)
 
 video_path = sys.argv[1]
