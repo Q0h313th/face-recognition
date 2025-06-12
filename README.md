@@ -9,8 +9,9 @@ Features implemented as of now:
 3. Checks for the number of faces in each frame, if there is more than one face found, compares them to check if its the same face (right now only checks for 2 faces)
 4. If the faces are not the same, skips the frames, if they're the same, writes the output to the file
 5. captures 10-second videos of one unique face and writes them to a file
-6. `count_time.py` is used to seperate a video based on its duration into respective directories 
-7. `run_all_videos.ps1` iterates over the files in a directory and runs the `count_time.py` script. (right now the directories are hardcoded but ill change that)
+6. `count_time_and_copy.py` is used to seperate a video based on its duration into respective directories. it COPIES the file hence increasing the storage. DONT USE THIS FOR PARSING THROUGH A HUGE AMOUNT OF FILES
+7. `count_time_and_move.py` is used to do the same thing as above, except it MOVES the file, which is why the storage stays constant. 
+8. `run_all_videos.ps1` iterates over the files in a directory and runs the `count_time.py` script. (right now the directories are hardcoded but ill change that)
 
 
 Precautions:
