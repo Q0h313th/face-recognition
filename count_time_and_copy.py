@@ -5,7 +5,7 @@ import shutil
 
 more_video_path = r'C:\Users\Chinmay\py_tools\processor_vids' # for videos longer than 10 seconds
 less_video_path = r'C:\Users\Chinmay\py_tools\less_vids' # for videos shorter than 10 seconds
-MAX_VIDEO_LENGTH = 10  # seconds
+THRESHOLD_VIDEO_LENGTH = 10  # seconds
 
 def safe_copy(src, dst_dir):
     os.makedirs(dst_dir, exist_ok=True)
