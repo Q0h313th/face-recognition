@@ -1,5 +1,5 @@
 # face-recognition
-project for internship application
+My internship repository
 
 test files used are also uploaded
 
@@ -12,6 +12,7 @@ Features implemented as of now:
 6. `count_time_and_copy.py` is used to seperate a video based on its duration into respective directories. it COPIES the file hence increasing the storage. DONT USE THIS FOR PARSING THROUGH A HUGE AMOUNT OF FILES
 7. `count_time_and_move.py` is used to do the same thing as above, except it MOVES the file, which is why the storage stays constant. 
 8. `run_all_videos.ps1` iterates over the files in a directory and runs the `count_time.py` script. (right now the directories are hardcoded but ill change that)
+9. `parse_files_for_unique_faces.py` searches for unique files with matching a particular regex pattern and moves it to dest_directory.
 
 
 Precautions:
