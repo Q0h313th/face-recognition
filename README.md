@@ -14,7 +14,7 @@ Features implemented as of now:
 8. `run_all_videos.ps1` iterates over the files in a directory and runs the `count_time.py` script. (right now the directories are hardcoded but ill change that)
 9. `parse_files_for_unique_faces.py` searches for unique files with matching a particular regex pattern and moves it to dest_directory.
 10. `crop_videos.py` is written to crop a multitude of videos given their url, start time and end time. It reads this data from video_list.py to prevent convoluting code with data, ive uploaded the test file too. Also, i used to perplexity to format the video_list.py according to the what it is now, i'd formatted it a bit weirdly but yeah perplexity worked
-
+11. `monitor_and_download_videos.py` is a small script that, when run, monitors your clipboard for any pastes into it, and sends the corresponding link to yt-dlp (default settings). Just let it run using `python script.py` and let pyperclip do the rest.
 
 Precautions:
 1. Its takes a really really long time to do all the face-recognition. Im assuming this is because the [face_recognition](https://github.com/ageitgey/face_recognition) library ive used is written in python. you can probably optimize it by looking over here (https://face-recognition.readthedocs.io/en/latest/readme.html#) but i haven't tried yet.
